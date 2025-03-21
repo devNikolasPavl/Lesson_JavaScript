@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Посик домов</title>
+    <script type="text/javascript">
+        function validateNumber(value) {
+            // Проверка ввода числа
+            // if (!isNumber(value))
+            alert("Пожалуйста, введите число.");
+        }
+
+        function validateZIPCode(value) {
+            // Проверка ввода индекса
+            // if (!isZIPCode (value))
+            alert("Пожалуйста, введите индекс в формате XXXXX.");
+        }
+
+        function calcPrice() {
+            var bedrooms = document.getElementById("bedrooms").value;
+            var zipCode = document.getElementById("zip").value;
+
+            // Отображение списка подходящих домов с сервера
+            form.submit();
+        }
+    </script>
+</head>
+<body>
+
+    <div id="frame">
+        <div id="header">Готовы к поиску нового дома?</div>
+        <div id="left">
+            <img src="house.png" alt="House">
+        </div>
+
+        <form name="orderform" action="..." method="POST">
+            <div class="field">Укажите ваш годовой доход:
+                <input id="income" type="text" size="12" onblur="validateNumber(this.value)">
+            </div>
+            <div class="field">Введите число спален:
+                <input id="income" type="text" size="6" onblur="validateNumber(this.value)">
+            </div>
+            <div class="field">Введите индекс:
+                <input id="income" type="text" size="10" onblur="validateZIPCode(this.value)">
+            </div>
+            <input type="button" value="Вычислить цену" onclick="calcPrice();">
+            <input type="button" value="Купить дом" onclick="findHouse(this.form);">
+        </form>
+
+    </div>
+    
+</body>
+</html>
